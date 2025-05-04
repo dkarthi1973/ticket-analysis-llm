@@ -1,0 +1,15 @@
+{
+    "tickets": [
+      {
+        "subject": "Login issue",
+        "description": "I cannot log in to my account.",
+        "category": "Authentication"
+      },
+      {
+        "subject": "Billing problem",
+        "description": "I was charged twice for my subscription.",
+        "category": "Billing"
+      }
+    ],
+    "categories": ["Authentication", "Billing"]
+  } 

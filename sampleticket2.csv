@@ -1,0 +1,4 @@
+subject,description,category,priority
+"Login issue after password reset","I reset my password yesterday following the instructions in the email. Now I'm trying to log in with the new password but keep getting an 'Invalid credentials' error. I've tried multiple times and I'm sure I'm typing the correct password.",Technical Support,high
+"Missing order confirmation","I placed an order (ID: ORD-78945) two days ago but haven't received any confirmation email. My credit card was charged $89.99. Can you please check if my order went through?",Billing,medium
+"Slow performance in dashboard","The analytics dashboard has been extremely slow for the past week. Charts take 30+ seconds to load and sometimes time out completely. This is affecting our ability to monitor our KPIs in real-time.",Bug,high

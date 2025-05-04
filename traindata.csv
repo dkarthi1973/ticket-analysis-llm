@@ -1,0 +1,12 @@
+subject,description,category
+Login issue,I cannot log in to my account.,Authentication
+Billing problem,I was charged twice for my subscription.,Billing
+Feature request,I would like to see a new feature added.,Feature Request
+Bug report,The app crashes when I open the settings page.,Bug
+Password reset,I need to reset my password.,Authentication
+Refund request,I want a refund for my last purchase.,Billing
+Performance issue,The app is very slow.,Performance
+Account deletion,I want to delete my account.,Account Management
+Feedback,I love the new update!,Feedback
+Subscription issue,I cannot upgrade my subscription.,Billing
+Login issue,I cannot log in to my account.,Authentication

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LLM Ticket Analysis UI</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; background-color: #f4f4f4; }
+    section { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin-bottom: 30px; }
+    h2 { color: #2c3e50; }
+    .form-group { margin-bottom: 15px; }
+    label { font-weight: bold; display: block; margin-bottom: 5px; }
+    input, textarea, select, button {
+      width: 100%; padding: 10px; margin-top: 2px;
+      border: 1px solid #ccc; border-radius: 4px;
+    }
+    button {
+      background-color: #3498db; color: white; font-weight: bold;
+      border: none; cursor: pointer; transition: background 0.3s;
+    }
+    button:hover { background-color: #2980b9; }
+    .result { margin-top: 15px; background: #f0f0f0; padding: 10px; border-radius: 4px; white-space: pre-wrap; }
+  </style>
+</head>
+<body>
+
+  <h1>🎯 LLM Ticket Analysis System</h1>
+
+  <!-- Analyze Ticket Section -->
+  <section>
+    <h2>🔍 Analyze a Single Ticket</h2>
+    <div class="form-group">
+      <label for="subject">Subject:</label>
+      <input type="text" id="subject" placeholder="Enter ticket subject" />
+    </div>
+    <div class="form-group">
+      <label for="description">Description:</label>
+      <textarea id="description" rows="4" placeholder="Enter ticket description"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="quick">Quick Analysis:</label>
+      <select id="quick">
+        <option value="false">No (LLM Full Analysis)</option>
+        <option value="true">Yes (Fast)</option>
+      </select>
+    </div>
+    <button onclick="analyzeTicket()">Analyze Ticket</button>
+    <div id="analyzeResult" class="result"></div>
+  </section>
+
+  <!-- Upload CSV Section -->
+  <section>
+    <h2>📁 Upload CSV for Bulk Analysis</h2>
+    <form id="uploadForm" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="csvFile">CSV File:</label>
+        <input type="file" id="csvFile" name="file" accept=".csv" required />
+      </div>
+      <div class="form-group">
+        <label for="subject_col">Subject Column:</label>
+        <input type="text" id="subject_col" name="subject_col" value="subject" required />
+      </div>
+      <div class="form-group">
+        <label for="description_col">Description Column:</label>
+        <input type="text" id="description_col" name="description_col" value="description" required />
+      </div>
+      <div class="form-group">
+        <label for="category_col">Category Column (optional):</label>
+        <input type="text" id="category_col" name="category_col" placeholder="category" />
+      </div>
+      <div class="form-group">
+        <label for="priority_col">Priority Column (optional):</label>
+        <input type="text" id="priority_col" name="priority_col" placeholder="priority" />
+      </div>
+      <button type="submit">Upload and Analyze</button>
+    </form>
+    <div id="uploadResult" class="result"></div>
+  </section>
+
+  <!-- Train Classifier Section -->
+  <section>
+    <h2>🧠 Train Classifier with JSON</h2>
+    <div class="form-group">
+      <label for="trainingData">JSON Input:</label>
+      <textarea id="trainingData" rows="10" placeholder='{"tickets": [...], "categories": [...]}'></textarea>
+    </div>
+    <button onclick="trainClassifier()">Train Classifier</button>
+    <div id="trainResult" class="result"></div>
+  </section>
+
+  <script>
+    async function analyzeTicket() {
+      const subject = document.getElementById("subject").value;
+      const description = document.getElementById("description").value;
+      const quick = document.getElementById("quick").value;
+
+      const payload = { subject, description };
+
+      const res = await fetch(`/analyze_ticket?quick=${quick}`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+      });
+
+      const result = await res.json();
+      document.getElementById("analyzeResult").textContent = JSON.stringify(result, null, 2);
+    }
+
+    document.getElementById("uploadForm").addEventListener("submit", async function (e) {
+      e.preventDefault();
+
+      const formData = new FormData();
+      formData.append("file", document.getElementById("csvFile").files[0]);
+      formData.append("subject_col", document.getElementById("subject_col").value);
+      formData.append("description_col", document.getElementById("description_col").value);
+      formData.append("category_col", document.getElementById("category_col").value);
+      formData.append("priority_col", document.getElementById("priority_col").value);
+
+      const res = await fetch("/upload_csv", {
+        method: "POST",
+        body: formData
+      });
+
+      const result = await res.json();
+      document.getElementById("uploadResult").textContent = JSON.stringify(result, null, 2);
+    });
+
+    async function trainClassifier() {
+      const input = document.getElementById("trainingData").value;
+      try {
+        const json = JSON.parse(input);
+        const res = await fetch("/train_classifier", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(json)
+        });
+        const result = await res.json();
+        document.getElementById("trainResult").textContent = JSON.stringify(result, null, 2);
+      } catch (err) {
+        document.getElementById("trainResult").textContent = "Invalid JSON input.";
+      }
+    }
+  </script>
+
+</body>
+</html>

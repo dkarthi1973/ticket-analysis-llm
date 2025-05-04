@@ -1,0 +1,59 @@
+[
+  {
+    "ticket_id": "TICKET-20250504153525",
+    "category": "I reset my password yesterday following the instructions in the email. Now I'm trying to log in with the new password but keep getting an 'Invalid credentials' error. I've tried multiple times and I'm sure I'm typing the correct password.",
+    "priority": ",",
+    "sentiment": 0.0,
+    "summary": "A , priority I reset my password yesterday following the instructions in the email. Now I'm trying to log in with the new password but keep getting an 'Invalid credentials' error. I've tried multiple times and I'm sure I'm typing the correct password. ticket regarding Login issue after password reset",
+    "suggested_response": "Thank you for contacting support about your i reset my password yesterday following the instructions in the email. now i'm trying to log in with the new password but keep getting an 'invalid credentials' error. i've tried multiple times and i'm sure i'm typing the correct password. issue. We're reviewing your ticket and will respond shortly.",
+    "analysis_details": {
+      "word_count": 1,
+      "sentiment_breakdown": {
+        "neg": 0.0,
+        "neu": 0.0,
+        "pos": 0.0,
+        "compound": 0.0
+      },
+      "analysis_timestamp": "2025-05-04T15:35:25.586105",
+      "analysis_method": "quick"
+    }
+  },
+  {
+    "ticket_id": "TICKET-20250504153525",
+    "category": "I placed an order (ID: ORD-78945) two days ago but haven't received any confirmation email. My credit card was charged $89.99. Can you please check if my order went through?",
+    "priority": ",",
+    "sentiment": -0.296,
+    "summary": "A , priority I placed an order (ID: ORD-78945) two days ago but haven't received any confirmation email. My credit card was charged $89.99. Can you please check if my order went through? ticket regarding Missing order confirmation",
+    "suggested_response": "Thank you for contacting support about your i placed an order (id: ord-78945) two days ago but haven't received any confirmation email. my credit card was charged $89.99. can you please check if my order went through? issue. We're reviewing your ticket and will respond shortly.",
+    "analysis_details": {
+      "word_count": 1,
+      "sentiment_breakdown": {
+        "neg": 0.0,
+        "neu": 0.0,
+        "pos": 0.0,
+        "compound": 0.0
+      },
+      "analysis_timestamp": "2025-05-04T15:35:25.588090",
+      "analysis_method": "quick"
+    }
+  },
+  {
+    "ticket_id": "TICKET-20250504153525",
+    "category": "The analytics dashboard has been extremely slow for the past week. Charts take 30+ seconds to load and sometimes time out completely. This is affecting our ability to monitor our KPIs in real-time.",
+    "priority": ",",
+    "sentiment": 0.0,
+    "summary": "A , priority The analytics dashboard has been extremely slow for the past week. Charts take 30+ seconds to load and sometimes time out completely. This is affecting our ability to monitor our KPIs in real-time. ticket regarding Slow performance in dashboard",
+    "suggested_response": "Thank you for contacting support about your the analytics dashboard has been extremely slow for the past week. charts take 30+ seconds to load and sometimes time out completely. this is affecting our ability to monitor our kpis in real-time. issue. We're reviewing your ticket and will respond shortly.",
+    "analysis_details": {
+      "word_count": 1,
+      "sentiment_breakdown": {
+        "neg": 0.0,
+        "neu": 0.0,
+        "pos": 0.0,
+        "compound": 0.0
+      },
+      "analysis_timestamp": "2025-05-04T15:35:25.589453",
+      "analysis_method": "quick"
+    }
+  }
+]

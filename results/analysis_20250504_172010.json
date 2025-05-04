@@ -1,0 +1,59 @@
+[
+  {
+    "ticket_id": "TICKET-20250504172010",
+    "category": "Authentication\r",
+    "priority": "high",
+    "sentiment": -0.4019,
+    "summary": "A high priority Authentication\r ticket regarding Login issues",
+    "suggested_response": "Thank you for contacting support about your authentication\r issue. We're reviewing your ticket and will respond shortly.",
+    "analysis_details": {
+      "word_count": 9,
+      "sentiment_breakdown": {
+        "neg": 0.278,
+        "neu": 0.722,
+        "pos": 0.0,
+        "compound": -0.4019
+      },
+      "analysis_timestamp": "2025-05-04T17:20:10.447905",
+      "analysis_method": "quick"
+    }
+  },
+  {
+    "ticket_id": "TICKET-20250504172010",
+    "category": "Authentication\r",
+    "priority": "low",
+    "sentiment": 0.3182,
+    "summary": "A low priority Authentication\r ticket regarding Feature request",
+    "suggested_response": "Thank you for contacting support about your authentication\r issue. We're reviewing your ticket and will respond shortly.",
+    "analysis_details": {
+      "word_count": 7,
+      "sentiment_breakdown": {
+        "neg": 0.0,
+        "neu": 0.723,
+        "pos": 0.277,
+        "compound": 0.3182
+      },
+      "analysis_timestamp": "2025-05-04T17:20:10.450854",
+      "analysis_method": "quick"
+    }
+  },
+  {
+    "ticket_id": "TICKET-20250504172010",
+    "category": "Authentication\r",
+    "priority": "critical",
+    "sentiment": -0.5423,
+    "summary": "A critical priority Authentication\r ticket regarding Payment problem",
+    "suggested_response": "Thank you for contacting support about your authentication\r issue. We're reviewing your ticket and will respond shortly.",
+    "analysis_details": {
+      "word_count": 7,
+      "sentiment_breakdown": {
+        "neg": 0.265,
+        "neu": 0.735,
+        "pos": 0.0,
+        "compound": -0.2023
+      },
+      "analysis_timestamp": "2025-05-04T17:20:10.453673",
+      "analysis_method": "quick"
+    }
+  }
+]

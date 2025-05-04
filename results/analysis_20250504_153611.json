@@ -1,0 +1,78 @@
+[
+  {
+    "ticket_id": "TICKET-20250504153611",
+    "category": "Authentication",
+    "priority": "low",
+    "sentiment": 0.0,
+    "summary": "A low priority Authentication ticket regarding Login issue after password reset",
+    "suggested_response": "Thank you for contacting support about your authentication issue. We're reviewing your ticket and will respond shortly.",
+    "analysis_details": {
+      "word_count": 1,
+      "sentiment_breakdown": {
+        "neg": 0.0,
+        "neu": 0.0,
+        "pos": 0.0,
+        "compound": 0.0
+      },
+      "analysis_timestamp": "2025-05-04T15:36:11.908407",
+      "analysis_method": "quick"
+    }
+  },
+  {
+    "ticket_id": "TICKET-20250504153611",
+    "category": "General Support",
+    "priority": "medium",
+    "sentiment": -0.296,
+    "summary": "A medium priority General Support ticket regarding Missing order confirmation",
+    "suggested_response": "Thank you for contacting support about your general support issue. We're reviewing your ticket and will respond shortly.",
+    "analysis_details": {
+      "word_count": 1,
+      "sentiment_breakdown": {
+        "neg": 0.0,
+        "neu": 0.0,
+        "pos": 0.0,
+        "compound": 0.0
+      },
+      "analysis_timestamp": "2025-05-04T15:36:11.909738",
+      "analysis_method": "quick"
+    }
+  },
+  {
+    "ticket_id": "TICKET-20250504153611",
+    "category": "General Support",
+    "priority": "low",
+    "sentiment": 0.0,
+    "summary": "A low priority General Support ticket regarding Slow performance in dashboard",
+    "suggested_response": "Thank you for contacting support about your general support issue. We're reviewing your ticket and will respond shortly.",
+    "analysis_details": {
+      "word_count": 1,
+      "sentiment_breakdown": {
+        "neg": 0.0,
+        "neu": 0.0,
+        "pos": 0.0,
+        "compound": 0.0
+      },
+      "analysis_timestamp": "2025-05-04T15:36:11.911278",
+      "analysis_method": "quick"
+    }
+  },
+  {
+    "ticket_id": "TICKET-20250504153611",
+    "category": "Authentication",
+    "priority": "low",
+    "sentiment": 0.0,
+    "summary": "A low priority Authentication ticket regarding unable to login",
+    "suggested_response": "Thank you for contacting support about your authentication issue. We're reviewing your ticket and will respond shortly.",
+    "analysis_details": {
+      "word_count": 1,
+      "sentiment_breakdown": {
+        "neg": 0.0,
+        "neu": 0.0,
+        "pos": 0.0,
+        "compound": 0.0
+      },
+      "analysis_timestamp": "2025-05-04T15:36:11.913129",
+      "analysis_method": "quick"
+    }
+  }
+]
